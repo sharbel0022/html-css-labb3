@@ -73,14 +73,22 @@ body {
       position: relative;
     }
   
-    #div-in-form {
-      display: inline-block;
-      text-align: left;
-      width: 100%;
-      box-sizing: border-box;
-      margin: 50px;
+    form{
+        background-color: #eee;
+        border: 5px solid #eee;
+        border-radius: 25px;
+        margin: 10px;
     }
-  
+    #div-in-form {
+        display: inline-block;
+        text-align: left;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 50px;
+       
+      }
+      
+      
     label {
       display: flex;
       align-self: flex-end;
@@ -91,7 +99,7 @@ body {
     #nick2,
     #color1,
     #color2 {
-      width: 370px;
+      width: 350px;
       height: 30px;
       border: 1px solid #ccc;
     }
@@ -121,6 +129,12 @@ body {
       border-color: #ffffff;
     }
   }
+
+
+
+
+
+
   
   /* Medium screens (415px to 1180px) */
   @media (min-width: 415px) and (max-width: 1180px) {
