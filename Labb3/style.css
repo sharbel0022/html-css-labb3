@@ -1,202 +1,362 @@
 /* Common styles for all screen sizes */
 body {
-    font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+
+html {
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  margin: 0 auto;
+}
+
+.jumbotron.text-center {
+  background-color: #dedede;
+  padding: 1.5rem;
+  border-radius: 0.3rem;
+  margin: 0 0 1rem 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.col {
+  margin-bottom: 1rem;
+}
+
+aside {
+  display: none;
+}
+
+table {
+  border-spacing: 0;
+  width: 100%;
+}
+
+td {
+  width: 125px;
+  height: 125px;
+  font-size: 50px;
+  border: 1px solid darkgray;
+  text-align: center;
+}
+
+input:focus {
+  box-shadow: 0 0 5px blue;
+}
+
+/* Media Queries */
+
+/* Small screens (max-width: 414px) */
+@media (max-width: 415px) {
+  html {
     font-size: 1rem;
   }
-  
-  html {
-    font-size: 16px;
-  }
-  
-  * {
+
+  .jumbotron {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    position: relative;
   }
-  
-  main {
-    margin: 0 auto;
-  }
-  
-  .jumbotron.text-center {
-    background-color: #dedede;
-    padding: 1.5rem;
-    border-radius: 0.3rem;
-    margin: 0 0 1rem 0;
-  }
-  
-  .text-center {
-    text-align: center;
-  }
-  
+
   form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background-color: #eee;
+    border: 5px solid #eee;
+    border-radius: 25px;
+    margin: 10px;
+    position: relative; /* Add relative positioning to the form container */
   }
-  
-  .col {
-    margin-bottom: 1rem;
-  }
-  
-  aside {
-    display: none;
-  }
-  
-  table {
-    border-spacing: 0;
+  #div-in-form {
+    display: inline-block;
+    text-align: left;
     width: 100%;
+    box-sizing: border-box;
+    margin: 50px;
   }
-  
-  td {
-    width: 125px;
-    height: 125px;
-    font-size: 50px;
-    border: 1px solid darkgray;
-    text-align: center;
+
+  label {
+    display: flex;
+    align-self: flex-end;
+    margin-bottom: 5px;
   }
-  
-  input:focus {
-    box-shadow: 0 0 5px blue;
+
+  #nick1,
+  #nick2,
+  #color1,
+  #color2 {
+    width: 100%;
+    height: 30px;
+    border: 1px solid #ccc;
   }
-  
-  /* Media Queries */
-  
-  /* Small screens (max-width: 414px) */
-  @media (max-width: 415px) {
-    html {
-      font-size: 1rem;
-    }
-  
-    .jumbotron {
-      margin: 0;
-      position: relative;
-    }
-  
-    form{
+
+  #div-with-a {
+    position: relative; /* Change to relative positioning */
+    margin-top: 20px; /* Add margin to create space between form and button */
+  }
+
+  #div-with-a #newGame {
+    width: 100%;
+    display: inline-block;
+    justify-content: right;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid #3498db;
+    color: white;
+    background-color: #1e90ff;
+    border-radius: 5px;
+  }
+
+  #div-with-a:hover #newGame {
+    background-color: #3498db;
+    color: #ffffff;
+    border-color: #ffffff;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Medium screens (415px to 1180px) */
+@media (min-width: 415px) and (max-width: 1180px) {
+
+
+body{
+    display: flex;
+}
+
+    
+    form {
         background-color: #eee;
         border: 5px solid #eee;
         border-radius: 25px;
         margin: 10px;
+        position: relative; /* Add relative positioning to the form container */
+        flex: 1; /* Take up remaining space in the flex container */
     }
+
     #div-in-form {
         display: inline-block;
         text-align: left;
         width: 100%;
         box-sizing: border-box;
         margin: 50px;
-       
-      }
-      
-      
-    label {
-      display: flex;
-      align-self: flex-end;
-      margin-bottom: 5px;
     }
-  
+
+    label {
+        display: flex;
+        align-self: flex-end;
+        margin-bottom: 5px;
+    }
+
     #nick1,
     #nick2,
     #color1,
     #color2 {
-      width: 350px;
-      height: 30px;
-      border: 1px solid #ccc;
+        width: 100%;
+        height: 30px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        margin-bottom: 10px;
     }
-  
+
     #div-with-a {
-      position: absolute;
-      top: 450px;
-      right: 10px;
-    }
-  
-    #div-with-a #newGame {
-      display: inline-block;
-      justify-content: right;
-      padding: 10px 20px;
-      font-size: 16px;
-      font-weight: bold;
-      text-decoration: none;
-      border: 1px solid #3498db;
-      color: white;
-      background-color: #1e90ff;
-      border-radius: 5px;
-    }
-  
+        position: absolute;
+             top: 400px;
+             right: 10px;
+       }
+     
+       #div-with-a #newGame {
+         display: inline-block;
+         padding: 10px 20px;
+         font-size: 16px;
+         font-weight: bold;
+         text-decoration: none;
+         border: 1px solid #3498db;
+         color: white;
+         background-color: #1e90ff;
+         border-radius: 5px;
+     }
+
     #div-with-a:hover #newGame {
-      background-color: #3498db;
-      color: #ffffff;
-      border-color: #ffffff;
+        background-color: #3498db;
+        color: #ffffff;
+        border-color: #ffffff;
     }
-  }
 
-
-
-
-
-
-  
-  /* Medium screens (415px to 1180px) */
-  @media (min-width: 415px) and (max-width: 1180px) {
     aside {
-      display: block;
-      width: 30%;
+        display: block;
+        width: 30%;
     }
-  
+
+    aside img {
+        width: 100%;
+        height: auto;
+        
+    }
+
     main {
-      width: 50%;
+        width: 50%;
     }
-  
+
     table {
-      border-spacing: 0;
-      width: 100%;
+        border-spacing: 0;
+        width: 100%;
     }
-  
+
     td {
-      width: 33.33%;
-      height: 125px;
-      border: 1px solid darkgray;
-      text-align: center;
+        width: 33.33%;
+        height: 125px;
+        border: 1px solid darkgray;
+        text-align: center;
     }
-  
+
     html {
-      font-size: 18px;
+        font-size: 18px;
     }
-  }
-  
-  /* Large screens (min-width: 1181px) */
-  @media (min-width: 1181px) {
-    main {
-      width: 70%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Large screens (min-width: 1181px) */
+@media (min-width: 1181px) {
+    body{
+        display: flex;
     }
-  
-    aside {
-      width: 300px;
+    
+        
+        form {
+            background-color: #eee;
+            border: 5px solid #eee;
+            border-radius: 25px;
+            margin: 10px;
+            position: relative; /* Add relative positioning to the form container */
+            flex: 1; /* Take up remaining space in the flex container */
+        }
+    
+        #div-in-form {
+            display: inline-block;
+            text-align: left;
+            width: 100%;
+            box-sizing: border-box;
+            margin: 50px;
+        }
+    
+        label {
+            display: flex;
+            align-self: flex-end;
+            margin-bottom: 5px;
+        }
+    
+        #nick1,
+        #nick2,
+        #color1,
+        #color2 {
+            width: 100%;
+            height: 30px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+    
+        #div-with-a {
+            position: absolute;
+                 top: 400px;
+                 right: 10px;
+           }
+         
+           #div-with-a #newGame {
+             display: inline-block;
+             padding: 10px 20px;
+             font-size: 16px;
+             font-weight: bold;
+             text-decoration: none;
+             border: 1px solid #3498db;
+             color: white;
+             background-color: #1e90ff;
+             border-radius: 5px;
+         }
+    
+        #div-with-a:hover #newGame {
+            background-color: #3498db;
+            color: #ffffff;
+            border-color: #ffffff;
+        }
+    
+        aside {
+            display: block;
+            width: 30%;
+        }
+    
+        aside img {
+            width: 100%;
+            height: auto;
+            
+        }
+    
+        main {
+            width: 50%;
+        }
+    
+        table {
+            border-spacing: 0;
+            width: 100%;
+        }
+    
+        td {
+            width: 33.33%;
+            height: 125px;
+            border: 1px solid darkgray;
+            text-align: center;
+        }
+    
+        html {
+            font-size: 18px;
+        }
     }
-  
-    #newGame:hover {
-      background-color: #dedede;
-    }
-  
-    table {
-      border-spacing: 0;
-      width: 100%;
-    }
-  
-    td {
-      width: 20%;
-      height: 200px;
-      border: 1px solid darkgray;
-      text-align: center;
-    }
-  
-    .col {
-      width: 49%;
-      margin-right: 2%;
-    }
-  
-    html {
-      font-size: 22px;
-    }
-  }
-  
