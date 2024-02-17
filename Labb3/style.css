@@ -56,12 +56,6 @@ td {
   text-align: center;
 }
 
-
-
-
-
-
-
 /* Small screens (max-width: 414px) */
 
 @media (max-width: 415px) {
@@ -130,18 +124,6 @@ td {
     border-color: #ffffff;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Medium screens (415px to 1180px) */
 @media (min-width: 415px) and (max-width: 1180px) {
@@ -248,98 +230,149 @@ td {
 
 
 
+
+
+
 /* Large screens (min-width: 1181px) */
 @media (min-width: 1181px) {
   body {
+    position: relative; /* Set relative positioning for absolute children */
     display: flex;
-    flex-direction: row;
   }
 
   form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     background-color: #eee;
     border: 5px solid #eee;
+    max-width: 1200px;
     border-radius: 25px;
-    margin: 10px;
+    margin: 10px auto;
+    padding: 120px;
+    position: relative;
   }
 
-  #div-in-form {
-    width: 100%;
-    box-sizing: border-box;
-    margin: 50px;
+
+
+
+
+
+
+  label[for="nick1"] {
+    position: absolute;
+    top: 20px;
+    left: 5px;
   }
 
-  label {
-    display: flex;
-    align-self: flex-end;
-    margin-bottom: 5px;
+  #nick1 {
+    position: absolute;
+    left: 0;
+    top: 60px;
+    left: 5px;
+    width: 500px;
+    height: 35px;
   }
-  #nick1,
+
+
+
+
+
+  label[for="nick2"] {
+    position: absolute;
+    top: 20px;
+    right: 330px;
+  }
   #nick2 {
-    width: 100%;
-    height: 30px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    margin-bottom: 10px;
+    position: absolute;
+    top: 60px;
+    right: 0px;
+    height: 35px;
+    width: 530px;
   }
 
-  #color1,
+
+
+
+
+
+  label[for="color1"] {
+    position: absolute;
+    top: 120px;
+    left: 5px;
+  }
+  #color1 {
+    position: absolute;
+    left: 5px;
+    width: 500px;
+    height: 35px;
+    top: 150px;
+  }
+
+
+
+
+
+  label[for="color2"] {
+    position: absolute;
+    top: 120px;
+    right: 385px;
+  }
   #color2 {
-    width: 100%;
-    height: 30px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    margin-bottom: 10px;
+    position: absolute;
+    right: 0px;
+    height: 35px;
+    width: 530px;
+    top: 150px;
   }
+}
 
-  #div-with-a #newGame {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-    border: 1px solid #3498db;
-    color: #3498db;
 
-    border-radius: 5px;
-  }
 
-  #div-with-a:hover #newGame {
-    background-color: #3498db;
-    color: #ffffff;
-    border-color: #ffffff;
-  }
+#div-with-a #newGame {
+  position: absolute;
+  left: 5px;
+  top: 200px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border: 1px solid #3498db;
+  color: #3498db;
 
-  aside {
-    width: 300px;
-    display: block;
-    width: 30%;
-  }
+  border-radius: 5px;
+}
 
-  aside img {
-    width: 100%;
-    height: auto;
-  }
+#div-with-a:hover #newGame {
+  background-color: #3498db;
+  color: #ffffff;
+  border-color: #ffffff;
+}
 
-  main {
-    width: 70%;
-  }
+aside {
+  width: 300px;
+  display: block;
+  width: 30%;
+}
 
-  table {
-    border-spacing: 0;
-    width: 100%;
-  }
+aside img {
+  width: 100%;
+  height: auto;
+}
 
-  td {
-    width: 200px;
-    height: 200px;
-    border: 1px solid darkgray;
-    text-align: center;
-  }
+main {
+  width: 70%;
+}
 
-  html {
-    font-size: 22px;
-  }
+table {
+  border-spacing: 0;
+  width: 100%;
+}
+
+td {
+  width: 200px;
+  height: 200px;
+  border: 1px solid darkgray;
+  text-align: center;
+}
+
+html {
+  font-size: 22px;
 }
