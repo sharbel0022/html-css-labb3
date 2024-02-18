@@ -1,137 +1,137 @@
-/* Common styles for all screen sizes */
+
 body {
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-}
-
-html {
-  font-size: 16px;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-main {
-  margin: 0 auto;
-}
-
-.jumbotron.text-center {
-  background-color: #dedede;
-  padding: 1.5rem;
-  border-radius: 0.3rem;
-  margin: 0 0 1rem 0;
-}
-
-.text-center {
-  text-align: center;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.col {
-  margin-bottom: 1rem;
-}
-
-
-
-table {
-  border-spacing: 0;
-  width: 100%;
-}
-
-td {
-  width: 125px;
-  height: 125px;
-  font-size: 50px;
-  border: 1px solid darkgray;
-  text-align: center;
-}
-
-/* Small screens (max-width: 414px) */
-
-@media (max-width: 415px) {
-  html {
+    font-family: "Roboto", sans-serif;
     font-size: 1rem;
   }
-
-  .jumbotron {
-    margin: 0;
-    position: relative;
+  
+  html {
+    font-size: 16px;
   }
-
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  main {
+    margin: 0 auto;
+  }
+  
+  .jumbotron.text-center {
+    background-color: #dedede;
+    padding: 1.5rem;
+    border-radius: 0.3rem;
+    margin: 0 0 1rem 0;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
   form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #eee;
     border: 5px solid #eee;
     border-radius: 25px;
     margin: 10px;
     position: relative;
   }
-
-  #div-in-form {
-    display: inline-block;
-    text-align: left;
-    width: 100%;
-    box-sizing: border-box;
-    margin: 50px;
-  }
-
-  label {
-    display: flex;
-    align-self: flex-end;
-    margin-bottom: 5px;
-  }
-
-  #nick1,
-  #nick2,
-  #color1,
-  #color2 {
-    width: 100%;
-    height: 30px;
-    border: 1px solid #ccc;
-  }
-
-  #div-with-a {
-    position: absolute;
-         top: 180px;
-         right: 100px;
-   }
-
-   #div-with-a #newGame {
-     display: inline-block;
-     padding: 10px 20px;
-     font-size: 16px;
-     font-weight: bold;
-     text-decoration: none;
-     border: 1px solid #3498db;
-     color: white;
-     background-color: #1e90ff;
-     border-radius: 5px;
- }
-
-#div-with-a:hover #newGame {
-    background-color: #3498db;
-    color: #ffffff;
-    border-color: #ffffff;
-}
-
-aside {
   
-    display: none;
-}
-
-aside img {
-    display: none;
-
-}
-
-}
+  .col {
+    margin-bottom: 1rem;
+  }
+  
+  table {
+    border-spacing: 0;
+    width: 100%;
+  }
+  
+  td {
+    width: 125px;
+    height: 125px;
+    font-size: 50px;
+    border: 1px solid darkgray;
+    text-align: center;
+  }
+  
+  /* Small screens (max-width: 414px) */
+  @media (max-width: 415px) {
+    html {
+      font-size: 1rem;
+    }
+  
+    .jumbotron {
+      margin: 0;
+      position: relative;
+    }
+  
+    form {
+      background-color: #eee;
+      border: 5px solid #eee;
+      border-radius: 25px;
+      margin: 10px;
+      position: relative;
+    }
+  
+    #div-in-form {
+      display: inline-block;
+      text-align: left;
+      width: 100%;
+      box-sizing: border-box;
+      margin: 50px;
+    }
+  
+    label {
+      display: flex;
+      align-self: flex-end;
+      margin-bottom: 5px;
+    }
+  
+    #nick1,
+    #nick2,
+    #color1,
+    #color2 {
+      width: 100%;
+      height: 30px;
+      border: 1px solid #ccc;
+    }
+  
+    #div-with-a {
+      position: absolute;
+      top: 180px;
+      right: 100px;
+    }
+  
+    #div-with-a #newGame {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      border: 1px solid #3498db;
+      color: white;
+      background-color: #1e90ff;
+      border-radius: 5px;
+    }
+  
+    #div-with-a:hover #newGame {
+      background-color: #3498db;
+      color: #ffffff;
+      border-color: #ffffff;
+    }
+  
+    aside {
+      display: none;
+    }
+  
+    aside img {
+      display: none;
+    }
+  }
+  
 
 
 
@@ -147,17 +147,9 @@ aside img {
 @media (min-width: 415px) and (max-width: 1180px) {
   body {
     display: flex;
-    flex-direction: row;
+   position: relative;
   }
 
-  form {
-    background-color: #eee;
-    border: 5px solid #eee;
-    border-radius: 25px;
-    margin: 10px;
-    position: relative; /* Add relative positioning to the form container */
-    flex: 1; /* Take up remaining space in the flex container */
-}
 
 #div-in-form {
     display: inline-block;
@@ -188,25 +180,29 @@ label {
     position: absolute;
          top: 200px;
          right: 100px;
+         color: white;
    }
 
    #div-with-a #newGame {
-     display: inline-block;
-     padding: 10px 20px;
-     font-size: 16px;
-     font-weight: bold;
-     text-decoration: none;
-     border: 1px solid #3498db;
-     color: white;
-     background-color: #1e90ff;
-     border-radius: 5px;
- }
-
-#div-with-a:hover #newGame {
+    position: absolute;
+    left: 5px;
+    top: 200px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
     background-color: #3498db;
     color: #ffffff;
     border-color: #ffffff;
-}
+  
+    border-radius: 5px;
+  }
+  
+  #div-with-a:hover #newGame {
+    background-color: #3498db;
+    color: #ffffff;
+    border-color: #ffffff;
+  }
 
 aside {
     display: block;
@@ -224,15 +220,11 @@ main {
 }
 
 table {
-    display: flex;
-    
-    justify-content: center;
-    border-spacing: 0;
-    width: 80%;
+    margin: 0 auto; 
   }
 
 td {
-    width: 33.33%;
+    width: 125px;
     height: 125px;
     border: 1px solid darkgray;
     text-align: center;
@@ -364,12 +356,9 @@ main {
 }
 
 table {
-  display: flex;
-  
-  justify-content: center;
-  border-spacing: 0;
-  width: 80%;
-}
+    margin: 0 auto; 
+    width: 80%;
+  }
 
 td {
   width: 200px;
