@@ -39,9 +39,7 @@ form {
   margin-bottom: 1rem;
 }
 
-aside {
-  display: none;
-}
+
 
 table {
   border-spacing: 0;
@@ -100,35 +98,56 @@ td {
   }
 
   #div-with-a {
-    position: relative;
-    margin-top: 20px;
-    text-align: right; /* Align content to the right within the container */
-  }
+    position: absolute;
+         top: 180px;
+         right: 100px;
+   }
 
-  #div-with-a #newGame {
-    width: auto; /* Set width to auto for a more natural size */
-    display: inline-block; /* Change to inline-block to allow width adjustment */
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-    border: 1px solid #3498db;
-    color: white;
-    background-color: #1e90ff;
-    border-radius: 5px;
-  }
+   #div-with-a #newGame {
+     display: inline-block;
+     padding: 10px 20px;
+     font-size: 16px;
+     font-weight: bold;
+     text-decoration: none;
+     border: 1px solid #3498db;
+     color: white;
+     background-color: #1e90ff;
+     border-radius: 5px;
+ }
 
-  #div-with-a:hover #newGame {
+#div-with-a:hover #newGame {
     background-color: #3498db;
     color: #ffffff;
     border-color: #ffffff;
-  }
 }
+
+aside {
+  
+    display: none;
+}
+
+aside img {
+    display: none;
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+
 
 /* Medium screens (415px to 1180px) */
 @media (min-width: 415px) and (max-width: 1180px) {
   body {
     display: flex;
+    flex-direction: row;
   }
 
   form {
@@ -138,86 +157,90 @@ td {
     margin: 10px;
     position: relative; /* Add relative positioning to the form container */
     flex: 1; /* Take up remaining space in the flex container */
-  }
+}
 
-  #div-in-form {
+#div-in-form {
     display: inline-block;
     text-align: left;
     width: 100%;
     box-sizing: border-box;
     margin: 50px;
-  }
+}
 
-  label {
+label {
     display: flex;
     align-self: flex-end;
     margin-bottom: 5px;
-  }
+}
 
-  #nick1,
-  #nick2,
-  #color1,
-  #color2 {
+#nick1,
+#nick2,
+#color1,
+#color2 {
     width: 100%;
     height: 30px;
     border: 1px solid #ccc;
     box-sizing: border-box;
     margin-bottom: 10px;
-  }
+}
 
-  #div-with-a {
+#div-with-a {
     position: absolute;
-    top: 400px;
-    right: 10px;
-  }
+         top: 200px;
+         right: 100px;
+   }
 
-  #div-with-a #newGame {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-    border: 1px solid #3498db;
-    color: white;
-    background-color: #1e90ff;
-    border-radius: 5px;
-  }
+   #div-with-a #newGame {
+     display: inline-block;
+     padding: 10px 20px;
+     font-size: 16px;
+     font-weight: bold;
+     text-decoration: none;
+     border: 1px solid #3498db;
+     color: white;
+     background-color: #1e90ff;
+     border-radius: 5px;
+ }
 
-  #div-with-a:hover #newGame {
+#div-with-a:hover #newGame {
     background-color: #3498db;
     color: #ffffff;
     border-color: #ffffff;
-  }
+}
 
-  aside {
+aside {
     display: block;
     width: 30%;
-  }
+}
 
-  aside img {
+aside img {
     width: 100%;
     height: auto;
-  }
 
-  main {
-    width: 70%;
-  }
+}
 
-  table {
+main {
+    width: 50%;
+}
+
+table {
+    display: flex;
+    
+    justify-content: center;
     border-spacing: 0;
-    width: 100%;
+    width: 80%;
   }
 
-  td {
-    width: 125px;
+td {
+    width: 33.33%;
     height: 125px;
     border: 1px solid darkgray;
     text-align: center;
-  }
+}
 
-  html {
+html {
     font-size: 18px;
-  }
+}
 }
 
 
@@ -250,12 +273,6 @@ td {
     position: relative;
   }
 
-
-
-
-
-
-
   label[for="nick1"] {
     position: absolute;
     top: 20px;
@@ -271,10 +288,6 @@ td {
     height: 35px;
   }
 
-
-
-
-
   label[for="nick2"] {
     position: absolute;
     top: 20px;
@@ -287,11 +300,6 @@ td {
     height: 35px;
     width: 530px;
   }
-
-
-
-
-
 
   label[for="color1"] {
     position: absolute;
@@ -306,10 +314,6 @@ td {
     top: 150px;
   }
 
-
-
-
-
   label[for="color2"] {
     position: absolute;
     top: 120px;
@@ -323,8 +327,6 @@ td {
     top: 150px;
   }
 }
-
-
 
 #div-with-a #newGame {
   position: absolute;
@@ -362,8 +364,11 @@ main {
 }
 
 table {
+  display: flex;
+  
+  justify-content: center;
   border-spacing: 0;
-  width: 100%;
+  width: 80%;
 }
 
 td {
