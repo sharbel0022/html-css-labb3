@@ -9,6 +9,7 @@
       margin: 0;
       padding: 0;
       color: white;
+      font-size: 30px;
     }
     
     body {
@@ -17,7 +18,7 @@
       display: grid;
       gap: 10px;
       grid-template-columns: repeat(10, 1fr);
-      grid-template-rows: 30px 20px auto 50px;
+      grid-template-rows: 30px 30px auto 50px;
     
       grid-template-areas:
         "header header header header header header header header header header"
@@ -89,6 +90,57 @@
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+    
+    @media (max-width: 901px) and (min-width: 401px) {
+      body {
+        grid-template-rows: 30px auto 50px;
+        grid-template-areas:
+          "header header header header header header header header header header"
+          "nav nav main main main main main main main main"
+          "foot foot foot foot foot foot foot foot foot foot";
+      }
+      .F {
+        height: 70vh;
+      }
+      .D,
+      .E {
+        display: none;
+      }
+      .C {
+        display: none;
+      }
+    }
+    
+    @media (max-width: 401px) {
+      body {
+        grid-template-rows: 30px auto;
+        grid-template-areas:
+          "nav nav nav nav nav nav nav nav nav nav"
+          "main main main main main main main main main main";
+      }
+      .DEF {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+          ". . d d d d d d. ."
+          ". . e e e e e e . ."
+          ". . f f f f f f . .";
+      }
+      .D,
+      .E,
+      .F {
+        height: 30vh;;
+      }
+      .A {
+        display: none;
+      }
+      .G,
+      .C {
+        display: none;
+      }
     }
     </style>
   </head>
