@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      color: white;
+    }
+    
+    body {
+      height: 100vh;
+      background-color: #eee;
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(10, 1fr);
+      grid-template-rows: 30px 20px auto 50px;
+    
+      grid-template-areas:
+        "header header header header header header header header header header"
+        "nav nav nav nav nav nav nav nav nav nav"
+        "side side main main main main main main main main"
+        "foot foot foot foot foot foot foot foot foot foot";
+    }
+    
+    .A {
+      background-color: #fa8072;
+      grid-area: header;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .B {
+      background-color: #deb887;
+      grid-area: nav;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .C {
+      background-color: #8a2be2;
+      grid-area: side;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .G {
+      background-color: #663399;
+      grid-area: foot;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .DEF {
+      background-color: #7fffd4;
+      grid-area: main;
+      display: grid;
+      gap: 1px;
+      grid-template-columns: repeat(10, 1fr);
+      grid-template-rows: auto auto;
+      grid-template-areas:
+        ". . d d d e e e . ."
+        ". . f f f f f f . .";
+    }
+    .D {
+      margin: 20px;
+      background-color: #556b2f;
+      grid-area: d; /* Assigned grid area */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .E {
+      margin: 20px;
+      background-color: #556b2f;
+      grid-area: e; /* Assigned grid area */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .F {
+      margin: 20px;
+      background-color: #ffd700;
+      grid-area: f; /* Assigned grid area */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="A">A</div>
+    <div class="B">B</div>
+    <div class="C">C</div>
+    <div class="DEF">
+      <div class="D">D</div>
+      <div class="E">E</div>
+      <div class="F">F</div>
+    </div>
+    <div class="G">G</div>
+    <script src="main.js"></script>
+  </body>
+</html>
